@@ -1,0 +1,4 @@
+# Keep the exact upstream commit: its embedded package version alone is ambiguous.
+-c constraints-downloader.txt
+f2 @ git+https://github.com/Johnserf-Seed/f2.git@f6be8c0ffba9a127075bbeafe4838716650b6325
+yt-dlp==2026.10.26

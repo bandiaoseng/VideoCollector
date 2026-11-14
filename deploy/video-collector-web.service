@@ -1,0 +1,26 @@
+[Unit]
+Description=Video Collector mobile entry
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=video-collector
+Group=video-collector
+WorkingDirectory=/opt/video-collector
+Environment=HOME=/var/lib/video-collector
+EnvironmentFile=/etc/video-collector/collector.env
+StateDirectory=video-collector
+StateDirectoryMode=0700
+ExecStart=/opt/video-collector/.venv/bin/uvicorn web_app:app --factory --host 127.0.0.1 --port 8765 --workers 1 --no-access-log
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/video-collector
+
+[Install]
+WantedBy=multi-user.target

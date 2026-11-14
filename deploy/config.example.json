@@ -1,0 +1,26 @@
+{
+  "data_dir": "/var/lib/video-collector/data",
+  "coordination_dir": "/var/lib/video-collector/coordination",
+  "storage": {"reserve_bytes": 536870912, "download_budget_bytes": 1073741824},
+  "categories": {},
+  "quark_web": {
+    "session_file": "/var/lib/video-collector/auth/quark-web-session.json",
+    "category_paths": {}
+  },
+  "download_command": [],
+  "download_commands": {
+    "douyin": ["/opt/video-collector/.venv-download/bin/python", "/opt/video-collector/douyin_f2.py", "--source", "{source}", "--output", "{output}", "--ffprobe", "/usr/bin/ffprobe", "--aria2", "/usr/bin/aria2c"]
+  },
+  "dtk": {"base_url": "", "api_key_env": "DTK_API_KEY", "timeout": 1800, "max_bytes": 1073741824},
+  "zhiling": {
+    "enabled": false,
+    "api_key_env": "ZHILING_API_KEY",
+    "ffprobe": "/usr/bin/ffprobe",
+    "ffmpeg": "/usr/bin/ffmpeg",
+    "request_timeout": 30,
+    "validation_timeout": 1800,
+    "max_bytes": 1073741824
+  },
+  "download_timeout": 3600,
+  "upload_timeout": 3600
+}

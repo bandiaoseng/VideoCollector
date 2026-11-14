@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#185d4d"><meta name="description" content="发来视频，留下一句点评。按你的分类存入夸克。">
+  <title>收藏助手 · 留住值得再看的视频</title>
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/assets/manifest.webmanifest"><link rel="stylesheet" href="/assets/style.css">
+  <script src="/assets/app.js" type="module"></script>
+</head>
+<body>
+<header class="top"><a class="brand" href="/"><img src="/assets/icon.svg" width="36" height="36" alt="">收藏助手</a><span class="private">我的私人收藏夹</span><button id="logout" class="text-button" hidden>退出</button></header>
+<main>
+  <section class="intro"><p class="eyebrow">随手收藏，带上你的想法</p><h1>好视频，<br class="mobile-break">和你的点评一起留下。</h1><p class="subtitle">发来链接，再写一句「点评 #类目」。<br>存进夸克时，文件名就是你的想法。</p></section>
+  <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+  <section id="login-panel" class="card" hidden><p class="step">私人入口</p><h2>打开你的收藏助手</h2><p class="muted">首次使用输入访问口令，这台设备会记住登录状态。</p><form id="login-form"><label for="token">访问口令</label><input id="token" type="password" autocomplete="current-password" required><button type="submit" class="primary">进入收藏助手 <span>→</span></button></form></section>
+  <div id="workspace" hidden>
+    <p id="service-status" class="service-status"></p>
+    <div class="layout">
+    <section class="composer">
+      <section class="card" id="source-panel"><div class="card-heading"><span class="step">01 / 发来视频</span><span class="small-tag">抖音 · 视频号</span></div><h2>把值得收藏的链接放这里</h2><form id="source-form"><label for="source">视频分享内容</label><textarea id="source" rows="4" placeholder="粘贴视频链接，也可以直接粘贴整段分享文字" required maxlength="10000"></textarea><p class="hint">只提取视频链接，分享文案里的话题不会影响分类。</p><button class="primary" type="submit">下一步，写点评 <span>→</span></button></form><p class="install-hint">添加到手机桌面，随时打开。支持的安卓浏览器安装后可尝试从系统分享菜单发送链接。</p><button id="install" class="secondary" hidden>安装到手机</button></section>
+      <section class="card" id="note-panel" hidden>
+        <div class="card-heading"><span class="step">02 / 留下点评</span><button class="text-button" id="another">再收一条</button></div>
+        <h2>这条视频，你想记住什么？</h2>
+        <div class="selected-source"><span id="selected-platform" class="platform"></span><p id="selected-caption"></p><span id="selected-url" class="url"></span></div>
+        <form id="note-form">
+          <label for="note">点评与类目</label><textarea id="note" rows="4" maxlength="4000" placeholder="例如：这个开头值得借鉴 #二创" required></textarea>
+          <div id="categories" class="chips" aria-label="快捷添加类目"></div><p id="save-status" class="hint" aria-live="polite"></p>
+          <div id="note-conflict" hidden>
+            <p class="hint">已保存的另一份点评：</p><p id="server-note"></p>
+            <button id="use-server" class="secondary" type="button">使用已保存这份</button>
+            <button id="keep-local" class="secondary" type="button">保留上方这份继续编辑</button>
+          </div>
+          <div id="local-copies"></div>
+          <div class="destination"><span>预计存入</span><strong id="destination">写好点评与 #类目后显示</strong></div>
+          <p id="filename-notice" class="hint"></p>
+          <button class="primary" id="submit-note" type="submit">开始收藏 <span>↗</span></button>
+        </form>
+        <p class="hint">显示「已提交」后可以关闭页面，后台会继续处理。</p>
+      </section>
+    </section>
+    <section class="library"><div class="library-heading"><h2>最近收藏</h2><button id="refresh" class="text-button">刷新</button></div><p class="hint">先收到视频，再补点评；每一条单独对应。</p><div id="items"></div><div id="empty" class="empty" hidden><span class="empty-icon">＋</span><h3>从第一条视频开始</h3><p>提交的链接和处理进度都会留在这里。</p></div><button id="more" class="secondary" hidden>查看更早的收藏</button></section>
+    </div>
+  </div>
+  <footer>你的点评，才是收藏的理由。</footer>
+</main>
+</body></html>

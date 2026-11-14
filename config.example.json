@@ -1,0 +1,31 @@
+{
+  "data_dir": "data",
+  "categories": {},
+  "quark_cli": "",
+  "quark_authorized": false,
+  "node": "node",
+  "download_command": [],
+  "zhiling": {
+    "enabled": false,
+    "api_key_env": "ZHILING_API_KEY",
+    "api_key_file": "",
+    "ffprobe": "ffprobe",
+    "ffmpeg": "ffmpeg",
+    "request_timeout": 30,
+    "validation_timeout": 180,
+    "max_bytes": 1073741824
+  },
+  "dtk": {
+    "base_url": "",
+    "api_key_env": "DTK_API_KEY",
+    "timeout": 900,
+    "max_bytes": 1073741824
+  },
+  "download_timeout": 600,
+  "upload_timeout": 3600,
+  "destination_check_timeout": 120,
+  "quark_web": {
+    "session_file": ".runtime/quark-web-session.json",
+    "category_paths": {}
+  }
+}

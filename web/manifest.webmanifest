@@ -1,0 +1,1 @@
+{"id":"/","name":"视频收藏助手","short_name":"收藏助手","lang":"zh-CN","start_url":"/","scope":"/","display":"standalone","background_color":"#f5f4ee","theme_color":"#185d4d","icons":[{"src":"/assets/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}],"share_target":{"action":"/share","method":"GET","params":{"title":"title","text":"text","url":"url"}}}

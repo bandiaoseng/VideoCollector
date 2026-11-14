@@ -1,0 +1,366 @@
+{
+  "date": "2026-11-14",
+  "kind": "privacy-reviewed-source-snapshot",
+  "installer_release": false,
+  "adjusted_files": [
+    "ZHILING_SETUP.md",
+    "config.example.json",
+    "test_zhiling_download.py"
+  ],
+  "test_adjustment": "Offline Douyin test double now accepts and checks the existing cancel_check callback; business implementation unchanged",
+  "validation": {
+    "python_full_run": 292,
+    "python_full_run_passed": 291,
+    "remaining_test_after_test_double_fix": "passed",
+    "frontend_tests_passed": 25,
+    "temporary_directory": "short F-drive path",
+    "long_path_limitation": "documented; not fixed in business code"
+  },
+  "rewritten_private_history_documents": [
+    "README.md",
+    "ZHILING_SETUP.md",
+    "release-status.json"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "66ad56d179251a20be5a0d1d4e3d83a752bb38fcb7af0ee8a0ba44d3826a52a6"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a8f7244593fa36d9cee1ed11dccc831fb99a000d431bb01fb7082090a8aecd7b"
+    },
+    {
+      "path": "UPLOAD_POLICY.md",
+      "sha256": "8e4c730e64e3483b4857319e5e6061790bcb39fd3632185364737d6a845fb8e5"
+    },
+    {
+      "path": "ZHILING_SETUP.md",
+      "sha256": "ae0a834ddc65db7d8164b7e6b2e5989dc0f88af8a06099377abfe0ca3c7bf390"
+    },
+    {
+      "path": "build_bundle.py",
+      "sha256": "57a5c8637f65f26e9a8d60ab2fca346a3c549861224bfd1702766d583732e2ed"
+    },
+    {
+      "path": "collector.py",
+      "sha256": "1c8c8c3d37d1667542cc658dbbc4399dbe66d6150437f58751f2dfa2320e82cc"
+    },
+    {
+      "path": "config.example.json",
+      "sha256": "7aed1896553065f12783e181c96fe62191ab70b41216b27956c0d059debe0139"
+    },
+    {
+      "path": "configure-zhiling.cmd",
+      "sha256": "affe35552c2440d95fd33c978217fc329c40afb2f6e2f07ba0585cd07783ae15"
+    },
+    {
+      "path": "configure_zhiling.py",
+      "sha256": "3b2616a1ad414c3a45ecee58d980329625a72a8edd7b5e66d0868c70114c8e77"
+    },
+    {
+      "path": "constraints-downloader.txt",
+      "sha256": "76217aadfbdbc30baba86b7d8e4f997beb5cb7b05502a5f0f4472dfca5d04a9b"
+    },
+    {
+      "path": "deploy/Caddyfile.example",
+      "sha256": "649466686e9cfad55ae8987791b71844585d46481266f423b925a55675dc7e67"
+    },
+    {
+      "path": "deploy/README.md",
+      "sha256": "150f38cc4a7e39f56f4cc8b06834638d246b10800a0e1564dd2e5b8a661365fe"
+    },
+    {
+      "path": "deploy/collector.env.example",
+      "sha256": "8cf19f37423d86d42a6ae16ca1cd5ee5c8d810da0ba9f282ce418e4e57eafd1a"
+    },
+    {
+      "path": "deploy/config.example.json",
+      "sha256": "f0df260ddd3df01dd223eaf305f5ed9a5703339e6b35300912b7ee879effce49"
+    },
+    {
+      "path": "deploy/video-collector-web.service",
+      "sha256": "4f383aeb97462ebcd3fac83e7b3847fa7638b6581e6c4b38d9577cf7d03ae53f"
+    },
+    {
+      "path": "deploy/video-collector-worker.service",
+      "sha256": "f1ae66dbeed6cf0260467a569f56c0e47f1edd63ce7b42005b597a10085ce82c"
+    },
+    {
+      "path": "desktop_app.py",
+      "sha256": "a2f802b5e2809305bc39c74497f5bd6d68747ca2801aa53b97bd806b4961c097"
+    },
+    {
+      "path": "desktop_recovery.py",
+      "sha256": "84478d3e56124047e12fa5cf594fbdff6006645480cdd4471b4bd8206a89004f"
+    },
+    {
+      "path": "destination_check.py",
+      "sha256": "4d41923a5f723440f76873d037a8d44a52b3c38ca91faa5d4e3fac64896c1b07"
+    },
+    {
+      "path": "douyin_f2.py",
+      "sha256": "6375eea59401a3d8fd2cc56dbbafba86ffc386c7ae5de8f42676c347953d049f"
+    },
+    {
+      "path": "dtk_download.py",
+      "sha256": "7d3979b29fab6004395a2c0a81992f5abc9df206045ea6a529ba95ae995c13b8"
+    },
+    {
+      "path": "execution_coordination.py",
+      "sha256": "3ecd2619f9f259e8df36c3a1e86438d9b8be21e13188b89c0f2685ce18188cd6"
+    },
+    {
+      "path": "note_input.py",
+      "sha256": "3321d30b03543f3d52eeb49fbb79428fdc665c789a1f1af8204a4fc6586c1321"
+    },
+    {
+      "path": "offline_preview.py",
+      "sha256": "6092e7dc2026761a431ec764d95fc78bcc5ac22390653c251a04de401f7936d4"
+    },
+    {
+      "path": "parse_recovery.py",
+      "sha256": "3105fb62c8a9ebd0a4b687f1c55a8aff27146216c5c194fa10d135637b1722c1"
+    },
+    {
+      "path": "preview-input.cmd",
+      "sha256": "9416867d73c0e67a8621e8cd628d871aeff165bf78afd9c69e82d216522293d6"
+    },
+    {
+      "path": "process_runner.py",
+      "sha256": "2b36b48ce8741bac5af2addcf212c93c0d632380228d373869113886499e126f"
+    },
+    {
+      "path": "quark_login.py",
+      "sha256": "7efc52e0edf47c105b994d8b3cd670760afc2a811717502e659b7dc0af2c56cc"
+    },
+    {
+      "path": "quark_login_cli.py",
+      "sha256": "e84d26554e555c495958f2275de2fac9e91ca2f85d2ab068218b507af402e5f3"
+    },
+    {
+      "path": "quark_web.py",
+      "sha256": "b3f13b5350801645c45b85c9f62b63a25ea912f2ec5213e517217f5754bd6e03"
+    },
+    {
+      "path": "quark_web_uploader.py",
+      "sha256": "2551557c699a8ef20114f413b976fb00d74d4ea64d490acb6336621ac8a98697"
+    },
+    {
+      "path": "release-status.json",
+      "sha256": "8c72a1005e6a71a077a8841f73bda9f6f4994eafc5773f40577109ee9ee6c4b4"
+    },
+    {
+      "path": "requirements-desktop.txt",
+      "sha256": "26a9dee619f55a291d52cd6d05a50274dee82909a0810f5ce6072df84d5ea1ef"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "sha256": "934fbb549ab3209320a68f549631f92ffa7dcd1372d15620c148eb5f55bd7735"
+    },
+    {
+      "path": "requirements-downloader.txt",
+      "sha256": "98639651311ad756a32a147063e26d38b37ae8f86b292d2567816c4c49421fb7"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "sha256": "98e65e2023e8add63aef81da83d01776434b94bd911bccf9a244e8bd80e941a1"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "2388ffd8035cee75f5c20c850123ac7172fe50372fb7f996e7807a6284e09257"
+    },
+    {
+      "path": "runtime_config.py",
+      "sha256": "2362046c91924916a170db880f0b7108d514540d1344150e8092077b878ed82e"
+    },
+    {
+      "path": "service_check.py",
+      "sha256": "a7c6c6dd89dd9ef395902f49342f96cd60c403e9e1c90b915e11a2ad6ceeda8e"
+    },
+    {
+      "path": "share_input.py",
+      "sha256": "b3490f0fd2271d29c65005ca62e5d7d05848b5a2d9610ece4af8bd80257468e2"
+    },
+    {
+      "path": "start-collector.cmd",
+      "sha256": "3f6214ce26d4627681eef70c09b7edf72a6db3f01e5a5b99da44c428a360894f"
+    },
+    {
+      "path": "storage_guard.py",
+      "sha256": "92ecbd77a4b5f469af8c99b2f26a1c4f768837db5d8c008749760b7309460ddf"
+    },
+    {
+      "path": "test_cancellation.py",
+      "sha256": "4ded6edb63f2a1de6d7be8fd617478bad79f0363259a75ba27f7eda1fa47a2a0"
+    },
+    {
+      "path": "test_collector.py",
+      "sha256": "4c288a55e381542c6410104b3347530e05a0a47c13526817c21ac01c648cb9a4"
+    },
+    {
+      "path": "test_desktop_app.py",
+      "sha256": "8d8123e1e4c20dbcd7e3fa414d2a34549f8b977f0bbe7c767bf5363161316230"
+    },
+    {
+      "path": "test_desktop_recovery.py",
+      "sha256": "2ccde77a8c4ccd33086c53ddaaba7685d276f239bfd639fb97e92c56d0833a47"
+    },
+    {
+      "path": "test_destination_check.py",
+      "sha256": "c812ca08c39f3461b3625981b27f8158b8fd455d87dedeac541d3e2c086f6e10"
+    },
+    {
+      "path": "test_douyin_f2.py",
+      "sha256": "3b9203bbf8d85676a44d67d03943e1f4ff66110f137bf700bdc92371952a208b"
+    },
+    {
+      "path": "test_draft_editor.mjs",
+      "sha256": "b110be1bea19bfc2f5c11f9a3ac7ba5d327418c5d71af99745036854837eaaf0"
+    },
+    {
+      "path": "test_dtk_download.py",
+      "sha256": "2230d5f66554912684bf7fae59d65de7784b5600c3c917aacaa026083f165c7b"
+    },
+    {
+      "path": "test_execution_coordination.py",
+      "sha256": "e0666e169dab54c85b56a3020dda77867e149a79e840b4aba30ee92e3ec8b7d2"
+    },
+    {
+      "path": "test_offline_preview.py",
+      "sha256": "d22a4c909429de3092cc582ac82a8c3b31e64f7e01d688acf6c13d40f08b2f75"
+    },
+    {
+      "path": "test_preview.mjs",
+      "sha256": "0a025bd9b7debc409c930a50e9bad9389fddc76f1c7b7a85331c6b1ddc5a9c06"
+    },
+    {
+      "path": "test_process_runner.py",
+      "sha256": "6c01cfe4fb141a75a9f896d5d46e9b5486cebacffa981a54468b267eb3a66f13"
+    },
+    {
+      "path": "test_quark_login_cli.py",
+      "sha256": "1c5e05580e73615b3825c3f673c926803013a1ed343177d829d9e0804f6b6c30"
+    },
+    {
+      "path": "test_quark_recovery.py",
+      "sha256": "1180c0e62988e50c711f6641cf15ce9f05a331b24790072c06272ca81733dcf2"
+    },
+    {
+      "path": "test_quark_web.py",
+      "sha256": "111d3995981f0d22f9b0ed5db848ce22744b69040d2b7119fde2e06f4cf320ca"
+    },
+    {
+      "path": "test_revisions.py",
+      "sha256": "3b795333e62ed709f9662cf14d1df76a2a4e223aad8ee6b116587adb4731d67a"
+    },
+    {
+      "path": "test_runtime_integration.py",
+      "sha256": "676b52f154d3be1d3c83a0fb07e8077e0e85717ef6a3383f82131216425c5650"
+    },
+    {
+      "path": "test_service_check.py",
+      "sha256": "d032160a1f745d3032d145a1ddcef795df8c5e589b40970a31ca1ca0ad634d61"
+    },
+    {
+      "path": "test_session_coordination.py",
+      "sha256": "c0055539601d05e513eeadf3403f82126511da1ec8b67931f41eb8ece7f62d8b"
+    },
+    {
+      "path": "test_storage_guard.py",
+      "sha256": "95c50ab017887adcd58e3f31a0c8225dfb1536a5c634d0e1a96423f8a7338182"
+    },
+    {
+      "path": "test_submission.mjs",
+      "sha256": "860c5c93aa320b089e8f8cec03eefb4cc4090fb3ee36674e63ffe5304c2cdbad"
+    },
+    {
+      "path": "test_upload_evidence.py",
+      "sha256": "1f18e72478c569b4ab678d7d206baa8e78960738edcf7660f87476f91e42888b"
+    },
+    {
+      "path": "test_web.py",
+      "sha256": "17ca50cf988c60f23913d41d09697a392e8623e47ad64c2fbd40f83cd9c92802"
+    },
+    {
+      "path": "test_web_recovery.py",
+      "sha256": "937e34ad1be53aa4b8ea2b40815fc583b73b5b2a013213f1e1ef699fe0b71e2d"
+    },
+    {
+      "path": "test_web_reparse.py",
+      "sha256": "951f9d0971b987a212307362ce02844ad52ab78b6f8d6bbb3ac57c197239953d"
+    },
+    {
+      "path": "test_web_runtime.py",
+      "sha256": "e372c2ab0d910711da64f7d3f61eba2ba7124974ba8672ecb8ee8154efab419e"
+    },
+    {
+      "path": "test_zhiling_download.py",
+      "sha256": "591f33780e2cf3d9f88ae8ff606100314ca13ab33292b46a6b3f4522cf3e1976"
+    },
+    {
+      "path": "upload_evidence.py",
+      "sha256": "bfbedf9ef04b8a56157c94fb61e763cc7fd5a6b217034bc1746d15acb478f57f"
+    },
+    {
+      "path": "uploader_factory.py",
+      "sha256": "778639453116fa07bd793370a6a75eb3f8f15763106e4a60350ab0802b627ab9"
+    },
+    {
+      "path": "validation/wechat_worker_offline.mjs",
+      "sha256": "c143b835708cd22ac0567ab0d7d0cadfa9b984a66975533fab1393bcc330ecd8"
+    },
+    {
+      "path": "web/app.js",
+      "sha256": "3acdd4684cb785cdcfcca442eda04f7f84084441090aa92222f9245c434c7eb8"
+    },
+    {
+      "path": "web/draft_editor.mjs",
+      "sha256": "5146d654903eb74f8d8f1bff6946a27adb25a114e101fb1a0ada67e6b76b7a9d"
+    },
+    {
+      "path": "web/icon.svg",
+      "sha256": "03dd4aa75c086cc4d0eaf451d9e25ef1ef7e9531c0fe09517d9af6acf8632f3b"
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "cd17cf2cdb357c78fbfd9a248266a93c45bc62e5dd39aac1e7e7c23abfda70a0"
+    },
+    {
+      "path": "web/manifest.webmanifest",
+      "sha256": "b9f4727cb8f2561626347cb12f63360bb27d1d7a349268eb34671a3f2bc501cc"
+    },
+    {
+      "path": "web/preview.mjs",
+      "sha256": "de907c1bc9e96a258c2eb2a003e3b9b7a05e22ffd200b16a682100a5cf1dd9cb"
+    },
+    {
+      "path": "web/style.css",
+      "sha256": "e6aecaa41efa99ebc8b4d635fa9edb5ca51613ed36883d78f3b0e28ee9303d6c"
+    },
+    {
+      "path": "web/sw.js",
+      "sha256": "4505fee3c797b5a6e678552154228e350795a8711ad22b9523e6645c39d61275"
+    },
+    {
+      "path": "web_app.py",
+      "sha256": "3f2b4fcd46f0319bdeedfa7b24e0e87b3213564d36412de5a881667122a3321a"
+    },
+    {
+      "path": "web_recovery.py",
+      "sha256": "b5ee41090402fc0fdf84866383c7078185c086fd677ae958e0acc8261dfa579e"
+    },
+    {
+      "path": "web_store.py",
+      "sha256": "41a38bcb0f6a345e888113fed4efda639b73f1e5b83278320bb8265168baa9a4"
+    },
+    {
+      "path": "worker.py",
+      "sha256": "6b598dc189832b51237ee90844b34d808fddb4ff2beafdde528626bc94571710"
+    },
+    {
+      "path": "zhiling_download.py",
+      "sha256": "bc3c7fcc077c4d638977572281bdce0a9d25a236eaddff522195ca6c74da9bfb"
+    }
+  ]
+}
