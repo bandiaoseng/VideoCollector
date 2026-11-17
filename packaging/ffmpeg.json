@@ -1,0 +1,8 @@
+{
+  "version": "8.1.1",
+  "variant": "essentials_build",
+  "source": "https://github.com/GyanD/codexffmpeg/releases/tag/8.1.1",
+  "archive": "ffmpeg-8.1.1-essentials_build.7z",
+  "sha256": "23ad8969fbe701d44e6e7e2b97c5fae4a71224fc33a2560a9034e5110d029d15",
+  "purpose": "Local video probing and decoding; no external full-build plugins required"
+}

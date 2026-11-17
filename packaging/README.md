@@ -10,6 +10,8 @@
 
 用户数据不能放进 payload。所有测试和缓存须指定到充足空间的磁盘；本次构建和验证全部在 F 盘。首次安装包未签名，不应宣称已经完成干净机器/真实账号业务验收。
 
+收藏助手使用 GyanD/codexffmpeg 官方 FFmpeg 8.1.1 Essentials 构建，下载地址与归档 SHA256 见 ffmpeg.json。只将 ffmpeg.exe、ffprobe.exe 放入 tools，并保留上游 LICENSE 和 README。该构建用于本地视频探测、解码及校验；安装包构建前已验证合成 H.264 视频的生成、探测与解码。
+
 工具来源：
 - https://github.com/python/cpython （PSF License，包含在 python/LICENSE.txt）
 - https://github.com/NSIS-Dev/nsis （许可包含在 licenses/NSIS.txt）
