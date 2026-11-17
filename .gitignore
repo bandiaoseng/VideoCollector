@@ -105,3 +105,13 @@ __pycache__/
 **/*.pem
 **/*.db
 **/*.log
+
+!/desktop_entry.py
+!/desktop_setup.py
+!/packaging/*.py
+!/packaging/*.cs
+!/packaging/*.nsi
+!/packaging/*.md
+!/packaging/*.json
+!/packaging/*.txt
+!/test_desktop_setup.py

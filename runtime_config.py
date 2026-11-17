@@ -1,5 +1,6 @@
 """Shared runtime configuration; loading never activates services or rewrites files."""
 import json
+import os
 from pathlib import Path
 
 
@@ -31,3 +32,8 @@ def load_runtime_config(path):
         return config
     except (OSError, ValueError, TypeError):
         raise ValueError('无法读取有效的收藏助手配置；请保留原文件并检查配置。') from None
+
+
+def default_config_path():
+    override = os.environ.get("VIDEOCOLLECTOR_DATA_DIR")
+    return (Path(override) if override else Path(__file__).resolve().parent) / "config.json"

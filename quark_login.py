@@ -23,7 +23,9 @@ def run_desktop_login(config_path, status_file, inbox, stopped, *, login=run_log
     return result
 
 
-def main():
+def main(config_path=None):
+    from runtime_config import default_config_path
+    config_path = Path(config_path or default_config_path()).resolve()
     import tkinter as tk
     from tkinter import ttk
     from PIL import ImageTk
@@ -37,11 +39,11 @@ def main():
     ttk.Label(root, textvariable=status, wraplength=440).pack(padx=20, pady=18)
     ttk.Label(root, text='登录状态只保存在本机。此窗口不会下载或上传视频。', wraplength=440).pack(padx=20)
     inbox = queue.Queue(); stopped = threading.Event()
-    status_file = Path(__file__).resolve().parent / '.runtime' / 'quark-login-status.json'
+    status_file = config_path.parent / '.runtime' / 'quark-login-status.json'
 
     def work():
         try:
-            run_desktop_login(Path(__file__).resolve().parent / 'config.json', status_file, inbox, stopped)
+            run_desktop_login(config_path, status_file, inbox, stopped)
         except Exception:
             save_private(status_file, {'state': 'failed'})
             inbox.put(('status', '登录连接未完成，请关闭后重试；未上传文件。'))
@@ -67,4 +69,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--config')
+    main(parser.parse_args().config)

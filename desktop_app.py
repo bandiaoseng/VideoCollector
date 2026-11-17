@@ -20,7 +20,7 @@ from destination_check import AgentEnvironmentUnsupported, cached_environment_re
 from parse_recovery import parser_recovery, approve_one_parse
 from zhiling_download import check_parser_connection, ZhilingError
 from desktop_recovery import resolve_job, guard_pending_uploads, prepare_cached_revision
-from runtime_config import load_runtime_config
+from runtime_config import load_runtime_config, default_config_path
 from execution_coordination import execution_entry
 
 ROOT = Path(__file__).resolve().parent
@@ -327,12 +327,12 @@ def result_text(report):
     return '\n'.join(lines)
 
 
-def build_window(config_path=ROOT / 'config.json', *, runner=run_request):
+def build_window(config_path=None, *, runner=run_request):
     import tkinter as tk
     from tkinter import messagebox, ttk
     from tkinter.scrolledtext import ScrolledText
 
-    config_path = Path(config_path).resolve()
+    config_path = Path(config_path or default_config_path()).resolve()
     root = tk.Tk()
     root.title('收藏助手 · 自动下载并存入夸克')
     root.geometry('780x780')
@@ -527,8 +527,16 @@ def build_window(config_path=ROOT / 'config.json', *, runner=run_request):
     def login_quark():
         pythonw = Path(sys.executable).with_name('pythonw.exe')
         subprocess.Popen([str(pythonw if pythonw.exists() else sys.executable),
-                          str(ROOT / 'quark_login.py')], creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
+                          str(ROOT / 'quark_login.py'), '--config', str(config_path)], creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
     ttk.Button(primary_buttons, text='登录夸克', command=login_quark).pack(side='left', ipady=6)
+    def settings():
+        if state['busy']:
+            messagebox.showinfo('正在处理', '请等本次任务结束后再修改设置。', parent=root)
+            return
+        from desktop_setup import show_settings
+        show_settings(root, config_path)
+        refresh_actions()
+    ttk.Button(primary_buttons, text='首次设置', command=settings).pack(side='left', padx=8, ipady=6)
     revision_button = ttk.Button(recovery_buttons, text='改点评后继续', command=lambda: start(revise=True), state='disabled')
     revision_button.pack(side='left', ipady=5)
     review_button = ttk.Button(recovery_buttons, text='核对夸克结果', command=lambda: start(review=True), state='disabled')
